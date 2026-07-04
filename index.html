@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VERA ABODJAMA - Attiéké, Placali et Attoupkou artisanaux. Commandez directement, livraison rapide.">
+    <title>VERA ABODJAMA — Attiéké &amp; Placali frais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="attt2.css">
+    <link rel="icon" type="image/jpeg" href="LOGOatt.jpeg">
+    <style>
+      /* CHIRO: feuille de style*/
+
+:root {
+    --orange: #E8631B;
+    --orange-dark: #C24F12;
+    --green: #1B7A3D;
+    --green-dark: #145C2E;
+    --cream: #FFF8F0;
+    --white: #FFFFFF;
+    --card-border: #FFE2C4;
+    --text: #2A1E14;
+    --text-muted: #6B5A4B;
+
+    --font-title: "Baloo 2", "Segoe UI", sans-serif;
+    --font-body: "Nunito Sans", "Segoe UI", sans-serif;
+
+    --radius: 16px;
+    --shadow: 0 4px 14px rgba(42, 30, 20, 0.10);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--cream);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Bande signature : couleurs du drapeau ivoirien */
+.flag-strip {
+    height: 6px;
+    background: linear-gradient(to right, var(--orange) 0 33.3%, var(--white) 33.3% 66.6%, var(--green) 66.6% 100%);
+}
+
+/* HEADER*/
+
+.site-header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--orange-dark);
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.plg {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-links li {
+    flex: 1 1 auto;
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    background: var(--cream);
+    border: 1px solid var(--card-border);
+    padding: 10px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.nav-links a.nav-whatsapp {
+    background: var(--green);
+    color: var(--white);
+    border-color: var(--green);
+}
+
+/*  HERO  */
+
+.hero {
+    text-align: center;
+    padding: 32px 20px 12px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: 1.7rem;
+    color: var(--orange-dark);
+    margin: 0 0 10px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/*  PRODUITS  */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 24px 16px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(42, 30, 20, 0.14);
+}
+
+.card img {
+    width: 100%;         
+    object-fit: cover;   
+    object-position: center; 
+    border-radius: 10px;
+    background: var(--cream); 
+}
+
+.card h2 {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    color: var(--text);
+    margin: 0;
+    text-align: center;
+}
+
+.prices {
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 8px 12px;
+}
+
+.prices p {
+    margin: 2px 0;
+    font-weight: 700;
+    color: var(--orange-dark);
+    font-size: 0.98rem;
+}
+
+.qte-label,
+.select-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.qte,
+select#tonne,
+select#format {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    padding: 10px 12px;
+    border: 2px solid var(--card-border);
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--text);
+    min-width: 110px;
+    min-height: 44px;
+}
+
+.qte:focus,
+select:focus,
+a.btn:focus,
+.nav-links a:focus {
+    outline: 3px solid var(--green);
+    outline-offset: 2px;
+}
+
+#nbBoules {
+    font-weight: 700;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--green);
+    color: var(--white);
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 16px;
+    border-radius: 12px;
+    min-height: 48px;
+    line-height: 1.2;
+    box-shadow: 0 3px 0 var(--green-dark);
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.btn::before {
+    content: "💬 ";
+}
+
+.card-tonnes {
+    border-color: var(--orange);
+    background: linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+}
+
+/*  FOOTER  */
+
+.site-footer {
+    background: var(--orange-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 28px 16px;
+    font-size: 0.95rem;
+}
+
+.site-footer a {
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*  TABLETTE / DESKTOP  */
+
+@media (min-width: 640px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-links {
+        width: auto;
+    }
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        font-size: 18px;
+    }
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 24px;
+    }
+}
+/* État "image en grand" du main */
+main:has(.image-plein-ecran) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 16px 48px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.retour {
+    align-self: flex-start;
+    text-decoration: none;
+    color: var(--white);
+    background: var(--orange);
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+}
+
+.retour:hover {
+    background: var(--orange-dark);
+}
+
+.retour strong {
+    font-size: 1.4em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.image-plein-ecran {
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(42, 30, 20, 0.18);
+    animation: apparition 0.25s ease;
+}
+
+@keyframes apparition {
+    from { opacity: 0; transform: scale(0.97); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/*Devs*/
+.liste-devs {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.liste-devs li {
+    background: var(--white);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
+
+.liste-devs a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.liste-devs a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<!--CHIRO ET H-DIGITAL : BODY-->
+<body>
+
+    
+
+    <!-- BANDE DRAPEAU -->
+    <div class="flag-strip" aria-hidden="true"></div>
+
+    <!-- EN-TÊTE -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigation principale">
+
+            <a href="index.html" class="logo">
+                <img src="LOGOatt.jpeg" alt="Logo VERA ABODJAMA" class="plg">
+                <span>VERA ABODJAMA</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#" onclick="afficher('horaire.jpeg')">🕒 Horaires</a></li>
+                <li><a onclick="afficher('consi.jpeg')" href="#">💳 Paiement</a></li>
+                <li><a href="https://wa.me/2250788256074" class="nav-whatsapp">💬 Nous contacter</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INTRO -->
+        <section class="hero">
+            <h1>Attiéké &amp; Placali frais, livrés chez vous</h1>
+            <p>Choisissez votre produit, indiquez la quantité, puis envoyez votre commande en un clic.</p>
+        </section>
+
+        <!-- SECTION PRODUITS -->
+        <section class="products" id="produits" aria-label="Nos produits">
+
+            <!-- CARD 1 -->
+            <article class="card">
+                <img src="att400g.jpeg" alt="Attiéké Abodjaman, format 400g" loading="lazy">
+                <h2>ATTIEKE ABODJAMAN</h2>
+                <div class="prices">
+                    <p>format 400g: 350 FCFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="card">
+                <img src="att1kg.jpeg" alt="Attiéké Abodjaman, format 1Kg" loading="lazy">
+                <h2>ATTIEKE ABODJAMAN</h2>
+                <div class="prices">
+                    <p>format 1Kg: 700 FCFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="card">
+                <img src="att250g.jpeg" alt="Attiéké Abodjaman, format 250g" loading="lazy">
+                <h2>ATTIEKE ABODJAMAN</h2>
+                <div class="prices">
+                    <p>format 250g: 200 FCFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 4 -->
+            <article class="card">
+                <img src="sacatt.jpeg" alt="Sac d'attiéké Abodjaman, 400g x 50" loading="lazy">
+                <h2>ATTIEKE ABODJAMAN</h2>
+                <div class="prices">
+                    <p>format sac 400g x 50: 17500 FCFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 5 -->
+            <article class="card">
+                <img src="600g.jpeg" alt="Attiéké Abodjaman, format 600g" loading="lazy">
+                <h2>ATTIEKE ABODJAMAN</h2>
+                <div class="prices">
+                    <p>format 600g : 500F CFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 6 -->
+            <article class="card">
+                <img src="plf.jpeg" alt="Placali frais, format 300g" loading="lazy">
+                <h2>PLACALI FRAIS</h2>
+                <div class="prices">
+                    <p>200F/boule</p>
+                    <p>100 boules à 20000F CFA</p>
+                    <p>format:300g</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 7 -->
+            <article class="card">
+                <img src="plp.jpeg" alt="Placali préparé" loading="lazy">
+                <h2>PLACALI PREPARE</h2>
+                <div class="prices">
+                    <p>100F / boule</p>
+                    <p>100 boules à 10000F</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 8 -->
+            <article class="card">
+                <img src="atou.jpeg" alt="Attoupkou, format 150g" loading="lazy">
+                <h2>ATTOUPKOU</h2>
+                <div class="prices">
+                    <p>3 à 500F CFA</p>
+                    <p>65 Sachets à 10000F CFA</p>
+                    <p>format:150g</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 9 -->
+            <article class="card">
+                <img src="sacatt500g.jpeg" alt="Sac d'attiéké Abodjaman, 500g x 50" loading="lazy">
+                <h2>ATTIEKE ABODJAMAN</h2>
+                <div class="prices">
+                    <p>format sac 500g x 50: 20000 FCFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 10 : ATTIEKE TONNES -->
+            <article class="card card-tonnes">
+                <img src="attTONNES.jpeg" alt="Attiéké vendu à la tonne" loading="lazy">
+                <h2>ATTIEKE TONNES</h2>
+
+                <label class="select-label">Quantité
+                    <select id="tonne">
+                        <option value="1">1 Tonne</option>
+                        <option value="2">2 Tonnes</option>
+                        <option value="3">3 Tonnes</option>
+                        <option value="4">4 Tonnes</option>
+                        <option value="5">5 Tonnes</option>
+                        <option value="0.5">0.5 Tonne</option>
+                    </select>
+                </label>
+
+                <label class="select-label">Format
+                    <select id="format">
+                        <option value="400">400 g</option>
+                        <option value="500">500 g</option>
+                        <option value="600">600 g</option>
+                        <option value="1000">1 kg</option>
+                    </select>
+                </label>
+
+                <p id="nbBoules">Nombre de boules : 2500</p>
+
+                <div class="prices">
+                    <p>Prix par TONNE: 650.000F CFA</p>
+                </div>
+
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 11 -->
+            <article class="card">
+                <img src="PANIERATT.jpeg" alt="Panier Abodjama, format 7kg" loading="lazy">
+                <h2>PANIER ABODJAMA</h2>
+                <div class="prices">
+                    <p>format 7kg: 5000 FCFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 12 -->
+            <article class="card">
+                <img src="sac1kg.jpeg" alt="Sac d'attiéké Abodjama, 1Kg x 50" loading="lazy">
+                <h2>ATTIEKE ABODJAMA</h2>
+                <div class="prices">
+                    <p>format sac 1Kg x 50: 35000F CFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 13 -->
+            <article class="card">
+                <img src="adjei.jpeg" alt="Attiéké normal (ajei), sac 400g x 50" loading="lazy">
+                <h2>ATTIEKE NORMAL (ajei)</h2>
+                <div class="prices">
+                    <p>format sac 400g x 50:15000F CFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+            <!-- CARD 14 -->
+            <article class="card">
+                <img src="pl200.jpeg" alt="Placali préparé, 200F la boule" loading="lazy">
+                <h2>PLACALI PREPARE</h2>
+                <div class="prices">
+                    <p>200F / Boule</p>
+                    <p>100 boules à 10000F CFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>VERA ABODJAMA — Attiéké &amp; Placali frais</p>
+        <p><a href="https://wa.me/2250788256074">💬 Discuter sur WhatsApp</a></p>
+        <p class="footer-links"><a href="#" onclick="afficher('horaire.jpeg')" >Horaires</a> · <a href="#" onclick="afficher('consi.jpeg')" >Moyens de paiement</a></p>
+         <a href="#" onclick="afficherDevs(); return false;">Développeurs du site</a>
+</p>    
+    </footer>
+
+    <!-- H-DIGITAL: JS WhatsApp (fonction commander() inchangée) -->
+    <script>
+function commander(btn) {
+
+    let card = btn.closest(".card");
+
+    let nom = card.querySelector("h2").innerText.trim();
+
+    let qteInput = card.querySelector(".qte");
+    let qte = qteInput ? Number(qteInput.value) : 1;
+
+    let priceText = card.querySelector(".prices p").innerText;
+
+    let format = "Non défini";
+    let prixUnitaire = 0;
+
+    if (priceText.includes("400g: 350")) {
+        format = "400g";
+        prixUnitaire = 350;
+    } 
+    else if (priceText.includes("1Kg: 700")) {
+        format = "1Kg";
+        prixUnitaire = 700;
+    } 
+    else if (priceText.includes("250g: 200")) {
+        format = "250g";
+        prixUnitaire = 200;
+    } 
+    else if (priceText.includes("17500")) {
+        format = "sac 400g x 50";
+        prixUnitaire = 17500;
+    } 
+    else if (priceText.includes("600g")) {
+        format = "600g";
+        prixUnitaire = 500;
+    } 
+    else if (nom === "PLACALI FRAIS") {
+        format = "boule";
+        prixUnitaire = 200;
+    } 
+    else if (nom === "PLACALI PREPARE") {
+        format = "boule";
+        prixUnitaire = 100;
+    } 
+    else if (nom === "ATTOUPKOU") {
+        format = "sachet";
+        prixUnitaire = 200;
+    }
+    else if (nom === "PANIER ABODJAMA") {
+        format = "7Kg";
+        prixUnitaire = 5000;
+    }
+    else if (nom === "ATTIEKE TONNES") {
+        prixUnitaire = 650000;
+    }
+
+    let total = prixUnitaire * qte;
+
+    let poidsTotal = "Non défini";
+
+    if (format === "400g") {
+        let poids = 400 * qte;
+        poidsTotal = poids >= 1000 ? (poids / 1000) + " Kg" : poids + " g";
+    } 
+    else if (format === "600g") {
+        let poids = 600 * qte;
+        poidsTotal = poids >= 1000 ? (poids / 1000) + " Kg" : poids + " g";
+    } 
+    else if (format === "250g") {
+        let poids = 250 * qte;
+        poidsTotal = poids >= 1000 ? (poids / 1000) + " Kg" : poids + " g";
+    } 
+    else if (format === "1Kg") {
+        poidsTotal = qte + " Kg";
+    }
+    else if (format === "7Kg") {
+        poidsTotal = (7 * qte) + " Kg";
+    }
+
+    let message =
+`Bonjour,
+
+Je souhaite commander :
+
+Produit : ${nom}
+
+Prix unitaire : ${prixUnitaire} FCFA`;
+
+    if (nom === "ATTIEKE TONNES") {
+
+        let tonnes = Number(card.querySelector("#tonne").value);
+        let formatTonne = Number(card.querySelector("#format").value);
+
+        let nbBoules = Math.floor((1000000 * tonnes) / formatTonne);
+
+        total = prixUnitaire * tonnes;
+
+        message += `
+Tonnage : ${tonnes} tonne(s)
+Format : ${formatTonne} g
+Nombre de boules : ${nbBoules}
+
+TOTAL À PAYER : ${total} FCFA`;
+
+    } else {
+
+        message += `
+Quantité : ${qte}
+Format : ${format}
+Poids total : ${poidsTotal}
+
+TOTAL À PAYER : ${total} FCFA`;
+    }
+
+    window.open(
+        "https://wa.me/2250788256074?text=" + encodeURIComponent(message),
+        "_blank"
+    );
+}
+    </script>
+    <!-- CHIRO:  Script ajouté pour gérer l'affichage de l'horaire, des devs,etc-->
+    <script>
+        function afficher(el){
+    let newMain = document.querySelector('main');
+
+    // Vide le contenu actuel du main
+    newMain.innerHTML = '';
+
+    // Lien retour
+    let retour = document.createElement('a');
+    retour.href = 'index.html';
+    retour.className = 'retour';
+    retour.innerHTML= '<strong>↩</strong> Revenir à l\'accueil';
+
+
+
+    // Image en grand
+    let img = document.createElement('img');
+    img.src = el;
+    img.alt = "Erreur d'affichage";
+    img.className = 'image-plein-ecran';
+
+    newMain.append(retour, img);
+}
+function afficherDevs(){
+    let newMain = document.querySelector('main');
+    newMain.innerHTML = '';
+
+    let retour = document.createElement('a');
+    retour.href = 'index.html';
+    retour.className = 'retour';
+    retour.innerHTML = '<strong>↩</strong> Revenir à l\'accueil';
+
+    let titre = document.createElement('h2');
+    titre.textContent = 'Développeurs du site';
+
+    let liste = document.createElement('ul');
+    liste.className = 'liste-devs';
+
+    let dev1 = document.createElement('li');
+    dev1.textContent = 'H-Digital';
+
+    let dev2 = document.createElement('li');
+    let lienDev2 = document.createElement('a');
+    lienDev2.href = 'https://wa.me/2250556830717';
+    lienDev2.target = '_blank';
+    lienDev2.textContent = 'Chiro 💬';
+    dev2.append(lienDev2);
+
+    liste.append(dev1, dev2);
+    newMain.append(retour, titre, liste);
+}
+    </script>
+</body>
+</html>
