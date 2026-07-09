@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="VERA ABODJAMA - Attiéké, Placali et Attoupkou artisanaux. Commandez directement, livraison rapide.">
-    <!-- Open Graph/ WhatsApp preview -->
-<meta property="og:title" content="VERA ABODJAMA — Attiéké & Placali frais">
+    <meta name="description" content="VERA ABODJAMAN - Attiéké, Placali et Attoupkou artisanaux. Commandez directement, livraison rapide.">
+    <!-- Open Graph / WhatsApp preview -->
+<meta property="og:title" content="VERA ABODJAMAN — Attiéké & Placali frais">
 <meta property="og:description" content="Attiéké, Placali et Attoupkou artisanaux. Commandez directement, livraison rapide.">
-<meta property="og:image" content="https://dev-siter.github.io/attieke/images/preview.png">
-<meta property="og:url" content="https://dev-siter.github.io/attieke">
+<meta property="og:image" content="https://ATTIEKE-ABODJAMAN.netlify.app/images/preview.png">
+<meta property="og:url" content="https://ATTIEKE-ABODJAMAN.netlify.app">
 <meta property="og:type" content="website">
-    <title>VERA ABODJAMA — Attiéké &amp; Placali frais</title>
+    <title>VERA ABODJAMAN — Attiéké &amp; Placali frais</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
@@ -427,8 +427,8 @@ main:has(.image-plein-ecran) {
         <nav class="navbar" aria-label="Navigation principale">
 
             <a href="index.html" class="logo">
-                <img src="/images/LOGOatt.jpeg" alt="Logo VERA ABODJAMA" class="plg">
-                <span>VERA ABODJAMA</span>
+                <img src="/images/LOGOatt.jpeg" alt="Logo VERA ABODJAMAN" class="plg">
+                <span>VERA ABODJAMAN</span>
             </a>
 
             <ul class="nav-links">
@@ -463,7 +463,18 @@ main:has(.image-plein-ecran) {
                 </label>
                 <a href="#" class="btn" onclick="commander(this)">Commander</a>
             </article>
-
+ <!--nouveau produit-->
+            <article class="card">
+                <img src="/images/att500g.jpg" alt="Attiéké Abodjaman, format 500g" loading="lazy">
+                <h2>ATTIEKE ABODJAMAN</h2>
+                <div class="prices">
+                    <p>format 500g: 400 FCFA</p>
+                </div>
+                <label class="qte-label">Quantité
+                    <input type="number" min="1" max="1000" value="1" class="qte">
+                </label>
+                <a href="#" class="btn" onclick="commander(this)">Commander</a>
+            </article>
             <!-- CARD 2 -->
             <article class="card">
                 <img src="/images/att1kg.jpeg" alt="Attiéké Abodjaman, format 1Kg" loading="lazy">
@@ -609,8 +620,8 @@ main:has(.image-plein-ecran) {
 
             <!-- CARD 11 -->
             <article class="card">
-                <img src="/images/PANIERATT.jpeg" alt="Panier Abodjama, format 7kg" loading="lazy">
-                <h2>PANIER ABODJAMA</h2>
+                <img src="/images/PANIERATT.jpeg" alt="Panier Abodjaman, format 7kg" loading="lazy">
+                <h2>PANIER ABODJAMAN</h2>
                 <div class="prices">
                     <p>format 7kg: 5000 FCFA</p>
                 </div>
@@ -622,8 +633,8 @@ main:has(.image-plein-ecran) {
 
             <!-- CARD 12 -->
             <article class="card">
-                <img src="/images/sac1kg.jpeg" alt="Sac d'attiéké Abodjama, 1Kg x 50" loading="lazy">
-                <h2>ATTIEKE ABODJAMA</h2>
+                <img src="/images/sac1kg.jpeg" alt="Sac d'attiéké Abodjaman, 1Kg x 50" loading="lazy">
+                <h2>ATTIEKE ABODJAMAN</h2>
                 <div class="prices">
                     <p>format sac 1Kg x 50: 35000F CFA</p>
                 </div>
@@ -664,7 +675,7 @@ main:has(.image-plein-ecran) {
     </main>
 
     <footer class="site-footer">
-        <p>VERA ABODJAMA — Attiéké &amp; Placali frais</p>
+        <p>VERA ABODJAMAN — Attiéké &amp; Placali frais</p>
         <p><a href="https://wa.me/2250788256074">💬 Discuter sur WhatsApp</a></p>
         <p class="footer-links"><a href="#" onclick="afficher('horaire.jpeg')" >Horaires</a> · <a href="#" onclick="afficher('consi.jpeg')" >Moyens de paiement</a></p>
          <a href="#" onclick="afficherDevs(); return false;">Développeurs du site</a>
@@ -676,7 +687,7 @@ main:has(.image-plein-ecran) {
 function commander(btn) {
 
     let card = btn.closest(".card");
-
+    
     let nom = card.querySelector("h2").innerText.trim();
 
     let qteInput = card.querySelector(".qte");
@@ -691,6 +702,12 @@ function commander(btn) {
         format = "400g";
         prixUnitaire = 350;
     } 
+    else if (priceText.includes("500g: 400")) {
+    format = "500g";
+    prixUnitaire = 400;
+    }
+    else if (priceText.includes("250g: 200")) {
+    format =
     else if (priceText.includes("1Kg: 700")) {
         format = "1Kg";
         prixUnitaire = 700;
@@ -719,7 +736,7 @@ function commander(btn) {
         format = "sachet";
         prixUnitaire = 200;
     }
-    else if (nom === "PANIER ABODJAMA") {
+    else if (nom === "PANIER ABODJAMAN") {
         format = "7Kg";
         prixUnitaire = 5000;
     }
