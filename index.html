@@ -701,13 +701,15 @@ function commander(btn) {
     if (priceText.includes("400g: 350")) {
         format = "400g";
         prixUnitaire = 350;
-    } 
+    }
     else if (priceText.includes("500g: 400")) {
     format = "500g";
     prixUnitaire = 400;
     }
     else if (priceText.includes("250g: 200")) {
-    format =
+    format = "250g";
+    prixUnitaire = 200;
+    }
     else if (priceText.includes("1Kg: 700")) {
         format = "1Kg";
         prixUnitaire = 700;
@@ -752,14 +754,18 @@ function commander(btn) {
         let poids = 400 * qte;
         poidsTotal = poids >= 1000 ? (poids / 1000) + " Kg" : poids + " g";
     } 
+    else if (format === "500g") {
+        let poids = 500 * qte;
+        poidsTotal = poids >= 1000 ? (poids / 1000) + " Kg" : poids + " g";
+    }
     else if (format === "600g") {
         let poids = 600 * qte;
         poidsTotal = poids >= 1000 ? (poids / 1000) + " Kg" : poids + " g";
-    } 
+    }
     else if (format === "250g") {
         let poids = 250 * qte;
         poidsTotal = poids >= 1000 ? (poids / 1000) + " Kg" : poids + " g";
-    } 
+    }
     else if (format === "1Kg") {
         poidsTotal = qte + " Kg";
     }
@@ -807,6 +813,7 @@ TOTAL À PAYER : ${total} FCFA`;
         "_blank"
     );
 }
+ //func end
     </script>
     <!-- CHIRO:  Script ajouté pour gérer l'affichage de l'horaire, des devs,etc-->
     <script>
